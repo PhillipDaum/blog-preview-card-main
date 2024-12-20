@@ -1,0 +1,109 @@
+/* Fonts From Google */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Import Local Fonts */
+/* WHY ISN'T THIS WORKING? */
+/* @font-face {
+    font-family: "Figtree";
+    src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+} */
+
+/* CSS Variables */
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--yellow);
+  font-family: "Figtree", serif;
+  font-optical-sizing: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+/* Typography */
+.text-preset-01 {
+  font-size: calc(24 / 16 * 1rem);
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 800; 
+}
+.text-preset-02 {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.text-preset-03 {
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.text-preset-03-bold {
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.card {
+  background-color: var(--white);
+  border: black 0.1rem solid;
+  border-radius: 1.25rem;
+  max-width: 24rem;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0.5rem 0.5rem;
+}
+.card img {
+  /* all images on card */
+  display: block;
+  max-width: 100%;
+}
+.card .main-image {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+.card .tag {
+  background-color: var(--yellow);
+  width: fit-content; /* is there a better way to do this? */
+  padding: 0.3rem .8rem .3rem;
+  border-radius: 0.5rem;
+}
+.card .description {
+  color: var(--gray-500);
+}
+.card .author {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  gap: 1rem;
+}
+.card .author img {
+    max-height: 100%;
+    width: auto;
+}
+.card .author p {
+    margin: 0; /* why did I need this? Where was this margin coming from? */
+}
+
+/* From Front End Mentor */
+.attribution {
+  font-size: calc(11 / 16 * 1rem);
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
