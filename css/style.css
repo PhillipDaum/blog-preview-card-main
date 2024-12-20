@@ -98,6 +98,10 @@ body {
 .card .author p {
     margin: 0; /* why did I need this? Where was this margin coming from? */
 }
+.card .hover:hover {
+    cursor: pointer;
+    color: var(--yellow);
+}
 
 /* From Front End Mentor */
 .attribution {
