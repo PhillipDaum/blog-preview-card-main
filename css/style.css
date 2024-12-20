@@ -32,25 +32,27 @@ body {
 
 /* Typography */
 .text-preset-01 {
-  font-size: 4vh;
+  /* my solution to the challenge to 'reduce font size for smaller screens without using media queries'*/
+  font-size: clamp(1.2rem, 3.6vw, 1.5rem);
   line-height: 1.5;
   letter-spacing: 0;
-  font-weight: 800; 
+  font-weight: 800;
 }
 .text-preset-02 {
-  font-size: clamp(.8rem, 2vw, calc(14 / 16 * 1rem)) ;
+  /* my solution to the challenge to 'reduce font size for smaller screens without using media queries'*/
+  font-size: clamp(0.8rem, 2vw, 1rem);
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 500;
 }
 .text-preset-03 {
-  font-size: calc(14 / 16 * 1rem);
+  font-size: 0.875rem;
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 500;
 }
 .text-preset-03-bold {
-  font-size: calc(14 / 16 * 1rem);
+  font-size: 0.875rem;
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 700;
@@ -73,8 +75,8 @@ body {
   max-width: 100%;
 }
 .card .main-image-container {
-    overflow: hidden;
-    border-radius: .75rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
 }
 .card .main-image {
   width: 100%;
@@ -82,7 +84,7 @@ body {
 .card .tag {
   background-color: var(--yellow);
   width: fit-content; /* is there a better way to do this? */
-  padding: 0.3rem .8rem .3rem;
+  padding: 0.3rem 0.8rem 0.3rem;
   border-radius: 0.5rem;
 }
 .card .description {
@@ -95,15 +97,15 @@ body {
   gap: 1rem;
 }
 .card .author img {
-    max-height: 100%;
-    width: auto;
+  max-height: 100%;
+  width: auto;
 }
 .card .author p {
-    margin: 0; /* why did I need this? Where was this margin coming from? */
+  margin: 0; /* why did I need this? Where was this margin coming from? */
 }
 .card .hover:hover {
-    cursor: pointer;
-    color: var(--yellow);
+  cursor: pointer;
+  color: var(--yellow);
 }
 
 /* From Front End Mentor */
@@ -117,14 +119,12 @@ body {
 
 /* Media Queries for small screen sizes */
 @media (max-width: 650px) {
-    .card {
-        width: 20.5rem;
-    }
-    .card .main-image {
-        max-width: 200%;
-        width: 120%;
-        height: auto;
-        padding-right: 1rem;
-        /* transform: translateX(-20%); */
-      }
+  .card {
+    width: 20.5rem;
+  }
+  .card .main-image {
+    max-width: 200%;
+    width: 120%;
+    height: auto;
+  }
 }
